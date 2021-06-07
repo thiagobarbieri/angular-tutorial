@@ -1,0 +1,27 @@
+.testadoCSS {
+  background: radial-gradient(#0b7beb, #fdfdfd);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+#t1 {
+  align-self: center;
+}
+
+#t2 {
+  width: 20%;
+  height: 20%;
+}
+
+#bts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

@@ -1,0 +1,50 @@
+<style>
+  .ligado {
+    color: green;
+  }
+
+  .desligado {
+    color: red;
+  }
+</style>
+
+<h3>Cart</h3>
+
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
+
+<div class="cart-item" *ngFor="let item of items" (ngButton)="removerItem(item)">
+  <span>{{ item.name }} </span>
+  <span>{{ item.price | currency }}</span>
+  <button  class="button" (click)="this.acaoNgIf(item.id)">teste</button>
+  <button class="button" (click)="removerItem(item)">Remover</button>
+  <div *ngIf="this.exibirTexto" class="testeDiv">
+    <div>
+      <p>asdasdasdasd</p>
+      <p>asdasdasdasdasdasdasdas</p>
+    </div>
+  </div>
+</div>
+
+
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+  <div>
+    <label for="address">
+      Address
+    </label>
+    <input id="address" type="text" formControlName="address">
+  </div>
+
+  <button class="button" type="submit">Purchase</button>
+
+</form>
